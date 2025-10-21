@@ -434,42 +434,45 @@
             }
         });
 
-        // --- SCROLLSPY LOGIC ---
+        // --- ROBUST SCROLLSPY LOGIC ---
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
+            const headerOffset = 100; // Offset for your sticky header, adjust if needed
 
             if (navLinks.length === 0 || sections.length === 0) return;
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.3
+            
+            const removeActiveClasses = () => {
+                navLinks.forEach(link => link.classList.remove('nav-active'));
             };
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        
-                        navLinks.forEach(link => {
-                            link.classList.remove('nav-active');
-                            // Use getAttribute to match href exactly
-                            if (link.getAttribute('href') === `#${id}`) {
-                                link.classList.add('nav-active');
-                            }
-                        });
+            window.addEventListener('scroll', () => {
+                let currentSectionId = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - headerOffset;
+                    if (window.scrollY >= sectionTop) {
+                        currentSectionId = section.getAttribute('id');
                     }
                 });
-            }, observerOptions);
 
-            sections.forEach(section => {
-                observer.observe(section);
+                // A special check for the very bottom of the page to ensure "Contact" is highlighted
+                const bottomOfPage = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2;
+                if (bottomOfPage) {
+                    currentSectionId = 'contact';
+                }
+
+                removeActiveClasses();
+                if (currentSectionId) {
+                    const activeLink = document.querySelector(`.nav-link[href="#${currentSectionId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('nav-active');
+                    }
+                }
             });
         });
 
     </script>
 </body>
 </html>
-
 
