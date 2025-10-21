@@ -47,6 +47,12 @@
         .gallery-nav.disabled {
             opacity: 0.3;
             cursor: not-allowed;
+            #profile-photo {
+    background-image: url(https://github.com/user-attachments/assets/a653f200-b5eb-4965-92dd-43a1c05f17e4);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
         }
     </style>
 </head>
@@ -88,11 +94,9 @@
         <!-- About Me Section -->
         <section id="about" class="py-16">
             <div class="grid md:grid-cols-3 gap-12 items-center">
-                <div class="md:col-span-1">
-                    <div class="aspect-square rounded-full overflow-hidden shadow-lg mx-auto w-64 h-64 md:w-full md:h-auto">
-                        <img src=https://github.com/user-attachments/assets/a653f200-b5eb-4965-92dd-43a1c05f17e4 class="w-full h-full object-cover object-top" alt="...">
-                    </div>
-                </div>
+               <div id="profile-photo" class="aspect-square rounded-full shadow-lg mx-auto w-64 h-64 md:w-full md:h-auto">
+    <!-- The image is now the background of this div -->
+</div>
                 <div class="md:col-span-2">
                     <h2 class="text-3xl font-bold text-slate-900 mb-4">About Me</h2>
                     <p class="text-slate-600 mb-4">
@@ -483,6 +487,7 @@
     </script>
 </body>
 </html>
+
 
 
 
