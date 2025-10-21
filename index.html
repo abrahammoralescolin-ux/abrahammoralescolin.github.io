@@ -49,7 +49,6 @@
             cursor: not-allowed;
         }
         
-        /* CORRECTED PROFILE PHOTO STYLE */
         #profile-photo {
             background-image: url('PASTE_YOUR_NEW_PERMANENT_LINK_HERE');
             background-size: cover;
@@ -57,7 +56,6 @@
             background-repeat: no-repeat;
         }
 
-        /* Style for active navigation link */
         .nav-active {
             color: #2563eb !important; /* Tailwind blue-600 */
             font-weight: 600;
@@ -103,7 +101,6 @@
         <section id="about" class="py-16">
             <div class="grid md:grid-cols-3 gap-12 items-center">
                <div id="profile-photo" class="aspect-square rounded-full shadow-lg mx-auto w-64 h-64 md:w-full md:h-auto">
-                    <!-- The image is now the background of this div -->
                </div>
                 <div class="md:col-span-2">
                     <h2 class="text-3xl font-bold text-slate-900 mb-4">About Me</h2>
@@ -127,12 +124,15 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- School Project 1 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card"
-                         data-gallery="https://placehold.co/1200x800/E2E8F0/475569?text=SAE+Img+1,https://placehold.co/1200x800/E2E8F0/475569?text=SAE+Img+2">
+                         data-gallery='[
+                            {"url": "https://placehold.co/1200x800/E2E8F0/475569?text=SAE+CAD+Model", "caption": "Initial SOLIDWORKS model of the Chromoly component."},
+                            {"url": "https://placehold.co/1200x800/E2E8F0/475569?text=SAE+Final+Product", "caption": "The final manufactured component after welding and finishing."}
+                         ]'>
                         <img src="https://placehold.co/600x400/E2E8F0/475569?text=SAE+Thumbnail" alt="Thumbnail of Senior Design Project" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold mb-2">Senior Design: Formula SAE</h4>
                             <p class="text-slate-600 mb-4">Designed and manufactured a complex Chromoly component using SOLIDWORKS, then applied Manufacturing skills to integrate components into car.</p>
-                            <div class="mt-4 pt-4 border-t border-slate-200">
+                             <div class="mt-4 pt-4 border-t border-slate-200">
                                 <p class="text-sm font-semibold text-amber-600 flex items-center">
                                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-1 1v1.618L5.586 7.23a2 2 0 00-1.09 1.838V14a2 2 0 002 2h8a2 2 0 002-2V9.068a2 2 0 00-1.09-1.838L12 4.618V3a1 1 0 00-1-1H9zm2 10a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
                                     Winner - Best Overall Senior Design Project
@@ -142,7 +142,7 @@
                     </div>
                     <!-- School Project 2 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card"
-                         data-gallery="https://placehold.co/1200x800/93C5FD/1E40AF?text=Time+Study+Img+1">
+                         data-gallery='[{"url": "https://placehold.co/1200x800/93C5FD/1E40AF?text=Time+Study+Data", "caption": "Data collection sheet from the assembly line time study."}]'>
                         <img src="https://placehold.co/600x400/93C5FD/1E40AF?text=Time+Study+Thumbnail" alt="Thumbnail of Time Study Project" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold mb-2">Assembly Line Time Study</h4>
@@ -151,7 +151,10 @@
                     </div>
                     <!-- School Project 3 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card"
-                         data-gallery="https://placehold.co/1200x800/A78BFA/4C1D95?text=Fixture+Img+1">
+                         data-gallery='[
+                            {"url": "https://placehold.co/1200x800/A78BFA/4C1D95?text=Fixture+CAD", "caption": "CAD design of the custom inspection fixture."},
+                            {"url": "https://placehold.co/1200x800/A78BFA/4C1D95?text=Fixture+Printed", "caption": "The 3D printed fixture in use."}
+                         ]'>
                         <img src="https://placehold.co/600x400/A78BFA/4C1D95?text=Fixture+Thumbnail" alt="Thumbnail of 3D Printed Fixture" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold mb-2">3D Printed Fixture Design</h4>
@@ -165,81 +168,13 @@
             <div class="mt-20">
                 <h3 class="text-3xl font-bold text-slate-800 mb-8 border-b-2 border-green-500 pb-2">Personal Projects</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Personal Project 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+1+Img+1">
+                    <!-- Template for a Personal Project -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" 
+                         data-gallery='[{"url": "https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+1", "caption": "Caption for project 1, image 1."}]'>
                         <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+1" alt="Thumbnail of Personal Project 1" class="w-full h-48 object-cover">
                         <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 1</h4><p class="text-slate-600">Description for personal project 1.</p></div>
                     </div>
-                    <!-- Personal Project 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+2+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+2" alt="Thumbnail of Personal Project 2" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 2</h4><p class="text-slate-600">Description for personal project 2.</p></div>
-                    </div>
-                    <!-- Personal Project 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+3+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+3" alt="Thumbnail of Personal Project 3" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 3</h4><p class="text-slate-600">Description for personal project 3.</p></div>
-                    </div>
-                    <!-- Personal Project 4 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+4+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+4" alt="Thumbnail of Personal Project 4" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 4</h4><p class="text-slate-600">Description for personal project 4.</p></div>
-                    </div>
-                    <!-- Personal Project 5 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+5+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+5" alt="Thumbnail of Personal Project 5" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 5</h4><p class="text-slate-600">Description for personal project 5.</p></div>
-                    </div>
-                    <!-- Personal Project 6 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+6+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+6" alt="Thumbnail of Personal Project 6" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 6</h4><p class="text-slate-600">Description for personal project 6.</p></div>
-                    </div>
-                    <!-- Personal Project 7 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+7+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+7" alt="Thumbnail of Personal Project 7" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 7</h4><p class="text-slate-600">Description for personal project 7.</p></div>
-                    </div>
-                    <!-- Personal Project 8 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+8+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+8" alt="Thumbnail of Personal Project 8" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 8</h4><p class="text-slate-600">Description for personal project 8.</p></div>
-                    </div>
-                    <!-- Personal Project 9 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+9+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+9" alt="Thumbnail of Personal Project 9" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 9</h4><p class="text-slate-600">Description for personal project 9.</p></div>
-                    </div>
-                    <!-- Personal Project 10 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+10+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+10" alt="Thumbnail of Personal Project 10" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 10</h4><p class="text-slate-600">Description for personal project 10.</p></div>
-                    </div>
-                    <!-- Personal Project 11 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+11+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+11" alt="Thumbnail of Personal Project 11" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 11</h4><p class="text-slate-600">Description for personal project 11.</p></div>
-                    </div>
-                    <!-- Personal Project 12 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+12+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+12" alt="Thumbnail of Personal Project 12" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 12</h4><p class="text-slate-600">Description for personal project 12.</p></div>
-                    </div>
-                    <!-- Personal Project 13 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+13+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+13" alt="Thumbnail of Personal Project 13" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 13</h4><p class="text-slate-600">Description for personal project 13.</p></div>
-                    </div>
-                    <!-- Personal Project 14 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+14+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+14" alt="Thumbnail of Personal Project 14" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 14</h4><p class="text-slate-600">Description for personal project 14.</p></div>
-                    </div>
-                    <!-- Personal Project 15 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/FDBA74/C2410C?text=Personal+Project+15+Img+1">
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+15" alt="Thumbnail of Personal Project 15" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 15</h4><p class="text-slate-600">Description for personal project 15.</p></div>
-                    </div>
+                    <!-- Add 14 more personal project cards here by copying the template above -->
                 </div>
             </div>
 
@@ -247,36 +182,13 @@
             <div class="mt-20">
                 <h3 class="text-3xl font-bold text-slate-800 mb-8 border-b-2 border-purple-500 pb-2">Work & Extracurricular Projects</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Work Project 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/F9A8D4/9D174D?text=Work+Project+1+Img+1">
+                    <!-- Template for a Work Project -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" 
+                         data-gallery='[{"url": "https://placehold.co/1200x800/F9A8D4/9D174D?text=Work+Project+1", "caption": "Caption for work project 1."}]'>
                         <img src="https://placehold.co/600x400/F9A8D4/9D174D?text=Work+Project+1" alt="Thumbnail of Work Project 1" class="w-full h-48 object-cover">
                         <div class="p-6"><h4 class="text-xl font-semibold mb-2">Work/Extracurricular Title 1</h4><p class="text-slate-600">Description for work/extracurricular project 1.</p></div>
                     </div>
-                    <!-- Work Project 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/F9A8D4/9D174D?text=Work+Project+2+Img+1">
-                        <img src="https://placehold.co/600x400/F9A8D4/9D174D?text=Work+Project+2" alt="Thumbnail of Work Project 2" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Work/Extracurricular Title 2</h4><p class="text-slate-600">Description for work/extracurricular project 2.</p></div>
-                    </div>
-                    <!-- Work Project 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/F9A8D4/9D174D?text=Work+Project+3+Img+1">
-                        <img src="https://placehold.co/600x400/F9A8D4/9D174D?text=Work+Project+3" alt="Thumbnail of Work Project 3" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Work/Extracurricular Title 3</h4><p class="text-slate-600">Description for work/extracurricular project 3.</p></div>
-                    </div>
-                    <!-- Work Project 4 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/F9A8D4/9D174D?text=Work+Project+4+Img+1">
-                        <img src="https://placehold.co/600x400/F9A8D4/9D174D?text=Work+Project+4" alt="Thumbnail of Work Project 4" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Work/Extracurricular Title 4</h4><p class="text-slate-600">Description for work/extracurricular project 4.</p></div>
-                    </div>
-                    <!-- Work Project 5 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/F9A8D4/9D174D?text=Work+Project+5+Img+1">
-                        <img src="https://placehold.co/600x400/F9A8D4/9D174D?text=Work+Project+5" alt="Thumbnail of Work Project 5" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Work/Extracurricular Title 5</h4><p class="text-slate-600">Description for work/extracurricular project 5.</p></div>
-                    </div>
-                    <!-- Work Project 6 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card" data-gallery="https://placehold.co/1200x800/F9A8D4/9D174D?text=Work+Project+6+Img+1">
-                        <img src="https://placehold.co/600x400/F9A8D4/9D174D?text=Work+Project+6" alt="Thumbnail of Work Project 6" class="w-full h-48 object-cover">
-                        <div class="p-6"><h4 class="text-xl font-semibold mb-2">Work/Extracurricular Title 6</h4><p class="text-slate-600">Description for work/extracurricular project 6.</p></div>
-                    </div>
+                    <!-- Add 5 more work project cards here by copying the template above -->
                 </div>
             </div>
 
@@ -322,24 +234,27 @@
         <p class="text-slate-500">© 2025 Abraham Morales-Colin. All Rights Reserved.</p>
     </footer>
 
-    <!-- Image Modal -->
-    <div id="image-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-[100] hidden opacity-0">
-        <div class="modal-content bg-white p-2 rounded-lg shadow-2xl w-full max-w-5xl max-h-full transform scale-95 relative">
-            <img id="modal-img" src="" alt="Enlarged project view" class="w-full h-auto max-h-[85vh] object-contain rounded">
+    <!-- Image Modal with Captions -->
+    <div id="image-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-[100] hidden opacity-0">
+        <div class="modal-content bg-transparent w-full max-w-5xl max-h-full transform scale-95 relative flex flex-col items-center justify-center">
             
-            <!-- Navigation -->
-            <div id="gallery-prev" class="gallery-nav prev">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-            </div>
-            <div id="gallery-next" class="gallery-nav next">
-                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <img id="modal-img" src="" alt="Enlarged project view" class="max-w-full max-h-[80vh] object-contain rounded mb-4">
+            
+            <div id="caption-container" class="w-full max-w-3xl text-center">
+                <p id="modal-caption" class="text-white text-base leading-relaxed"></p>
+                <div id="gallery-counter" class="text-white/70 text-sm mt-2"></div>
             </div>
 
-            <!-- Counter -->
-            <div id="gallery-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-sm px-3 py-1 rounded-full"></div>
+            <!-- Navigation -->
+            <div id="gallery-prev" class="gallery-nav prev hidden md:flex">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </div>
+            <div id="gallery-next" class="gallery-nav next hidden md:flex">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
             
             <!-- Close Button -->
-            <button id="modal-close" class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-lg text-slate-800 hover:bg-red-500 hover:text-white transition">
+            <button id="modal-close" class="absolute top-0 right-0 m-4 bg-white/20 text-white rounded-full p-2 hover:bg-white/40 transition">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
         </div>
@@ -354,9 +269,10 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // --- GALLERY MODAL LOGIC ---
+        // --- GALLERY MODAL LOGIC WITH CAPTIONS ---
         const modal = document.getElementById('image-modal');
         const modalImg = document.getElementById('modal-img');
+        const modalCaption = document.getElementById('modal-caption');
         const modalClose = document.getElementById('modal-close');
         const projectCards = document.querySelectorAll('.project-card');
         
@@ -364,87 +280,84 @@
         const galleryNextBtn = document.getElementById('gallery-next');
         const galleryCounter = document.getElementById('gallery-counter');
 
-        let currentImages = [];
+        let currentGallery = [];
         let currentIndex = 0;
 
-        function updateModalImage() {
-            modalImg.src = currentImages[currentIndex];
-            galleryCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+        function updateModalContent() {
+            const item = currentGallery[currentIndex];
+            modalImg.src = item.url;
+            modalCaption.textContent = item.caption;
+            galleryCounter.textContent = `${currentIndex + 1} / ${currentGallery.length}`;
             
-            // Toggle nav button visibility
             galleryPrevBtn.classList.toggle('disabled', currentIndex === 0);
-            galleryNextBtn.classList.toggle('disabled', currentIndex === currentImages.length - 1);
+            galleryNextBtn.classList.toggle('disabled', currentIndex === currentGallery.length - 1);
             
-            // Hide nav/counter if there's only one image
-            galleryPrevBtn.classList.toggle('hidden', currentImages.length <= 1);
-            galleryNextBtn.classList.toggle('hidden', currentImages.length <= 1);
-            galleryCounter.classList.toggle('hidden', currentImages.length <= 1);
+            const hasMultipleImages = currentGallery.length > 1;
+            galleryPrevBtn.classList.toggle('hidden', !hasMultipleImages);
+            galleryNextBtn.classList.toggle('hidden', !hasMultipleImages);
+            galleryCounter.classList.toggle('hidden', !hasMultipleImages);
         }
 
         projectCards.forEach(card => {
             card.addEventListener('click', () => {
                 const galleryData = card.dataset.gallery;
                 if (!galleryData) return;
-
-                currentImages = galleryData.split(',');
-                currentIndex = 0;
                 
-                updateModalImage();
-
-                modal.classList.remove('hidden');
-                setTimeout(() => modal.classList.add('opacity-100'), 10);
-                setTimeout(() => document.querySelector('.modal-content').classList.remove('scale-95'), 10);
+                try {
+                    currentGallery = JSON.parse(galleryData);
+                    if (Array.isArray(currentGallery) && currentGallery.length > 0) {
+                        currentIndex = 0;
+                        updateModalContent();
+                        modal.classList.remove('hidden');
+                        setTimeout(() => {
+                            modal.classList.add('opacity-100');
+                            document.querySelector('.modal-content').classList.remove('scale-95');
+                        }, 10);
+                    }
+                } catch (e) {
+                    console.error("Could not parse gallery data:", e);
+                }
             });
         });
 
-        galleryNextBtn.addEventListener('click', () => {
-            if (currentIndex < currentImages.length - 1) {
-                currentIndex++;
-                updateModalImage();
+        function navigateGallery(direction) {
+            const newIndex = currentIndex + direction;
+            if (newIndex >= 0 && newIndex < currentGallery.length) {
+                currentIndex = newIndex;
+                updateModalContent();
             }
-        });
+        }
 
-        galleryPrevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateModalImage();
-            }
-        });
+        galleryNextBtn.addEventListener('click', () => navigateGallery(1));
+        galleryPrevBtn.addEventListener('click', () => navigateGallery(-1));
 
         const closeModal = () => {
             document.querySelector('.modal-content').classList.add('scale-95');
             modal.classList.remove('opacity-100');
             setTimeout(() => {
                 modal.classList.add('hidden');
-                // Clear the image src to stop loading if it's a large image
                 modalImg.src = "";
+                modalCaption.textContent = "";
             }, 300);
         }
 
         modalClose.addEventListener('click', closeModal);
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
+            if (e.target === modal) closeModal();
         });
         
         document.addEventListener('keydown', (e) => {
             if (modal.classList.contains('hidden')) return;
-
-            if (e.key === "Escape") {
-                closeModal();
-            } else if (e.key === "ArrowRight") {
-                galleryNextBtn.click();
-            } else if (e.key === "ArrowLeft") {
-                galleryPrevBtn.click();
-            }
+            if (e.key === "Escape") closeModal();
+            if (e.key === "ArrowRight") galleryNextBtn.click();
+            if (e.key === "ArrowLeft") galleryPrevBtn.click();
         });
 
         // --- ROBUST SCROLLSPY LOGIC ---
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
-            const headerOffset = 100; // Offset for your sticky header, adjust if needed
+            const headerOffset = 100;
 
             if (navLinks.length === 0 || sections.length === 0) return;
             
@@ -454,7 +367,6 @@
 
             window.addEventListener('scroll', () => {
                 let currentSectionId = '';
-
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop - headerOffset;
                     if (window.scrollY >= sectionTop) {
@@ -462,24 +374,45 @@
                     }
                 });
 
-                // A special check for the very bottom of the page to ensure "Contact" is highlighted
                 const bottomOfPage = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2;
-                if (bottomOfPage) {
-                    currentSectionId = 'contact';
-                }
+                if (bottomOfPage) currentSectionId = 'contact';
 
                 removeActiveClasses();
                 if (currentSectionId) {
                     const activeLink = document.querySelector(`.nav-link[href="#${currentSectionId}"]`);
-                    if (activeLink) {
-                        activeLink.classList.add('nav-active');
-                    }
+                    if (activeLink) activeLink.classList.add('nav-active');
                 }
             });
         });
-
     </script>
 </body>
 </html>
+```
 
+---
+
+### How to Add Your Images with Captions
+
+This is the most important part. You will now add your gallery data in a structured format called **JSON**. It looks a little different, but it's very powerful.
+
+For each project card, you will edit the `data-gallery` attribute.
+
+**The Format:**
+* It starts with `[` and ends with `]`.
+* Each image is a block inside `{...}`.
+* Inside the block, you have `"url": "YOUR_IMAGE_LINK"` and `"caption": "Your caption text here."`.
+* Each block `{...}` is separated by a comma.
+
+**Example for a Project with 3 Images:**
+
+You will find this attribute in the project card's `<div>`:
+`data-gallery='[ ... ]'`
+
+You need to fill it in like this:
+```html
+data-gallery='[
+    {"url": "https://.../link-to-image-1.jpg", "caption": "This is the CAD model I designed in SOLIDWORKS."},
+    {"url": "https://.../link-to-image-2.jpg", "caption": "Here is the finished part after machining."},
+    {"url": "https://.../link-to-image-3.jpg", "caption": "The component installed in the final assembly."}
+]'
 
