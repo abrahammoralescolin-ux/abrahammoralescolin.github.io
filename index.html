@@ -229,8 +229,8 @@
             <div class="mt-20">
                 <h3 class="text-3xl font-bold text-slate-800 mb-8 border-b-2 border-green-500 pb-2">Personal Projects</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Personal Project 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card"
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card flex flex-col"
                         data-gallery='[
                            {"url": "Addition slab volume.jpg", "caption": "Initial design phase using SolidWorks for structural modeling and concrete volume calculations"},
                            {"url": "Addition slab layout.jpg", "caption": "Translating the SolidWorks model into on-site foundation drawings to ensure dimensional accuracy."},
@@ -245,31 +245,36 @@
                            {"url": "insulation added.jpeg", "caption": "Final phase: Installing insulation paneling to improve the buildings thermal properties."}
                         ]'>
                         <img src="Me thumbail shop.jpeg" alt="Thumbnail" class="w-full h-48 object-cover">
-                        <div class="p-6">
+                        <div class="p-6 flex-grow">
                             <h4 class="text-xl font-semibold mb-2">Personal Shop Build Addition 20' X 20'</h4>
                             <p class="text-slate-600">Managed the end-to-end design and construction of a 400 sq. ft. steel workshop addition, from SolidWorks modeling and site prep to fabrication and final assembly.</p>
                         </div>
                     </div>
-                    <!-- Personal Project 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card"
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card flex flex-col"
                         data-gallery='[
                         {"url": "car port.jpeg", "caption": "Initial SolidWorks model of the carport, selecting I-beams for their high strength in cantilever applications."},
                         {"url": "stress analysis.jpeg", "caption": "Executing a Finite Element Analysis (FEA) simulation in SolidWorks to verify the cantilevered beam design under expected load."}
                         ]'>
                         <img src="stress analysis.jpeg" alt="Thumbnail" class="w-full h-48 object-cover">
-                        <div class="p-6">
+                        <div class="p-6 flex-grow">
                             <h4 class="text-xl font-semibold mb-2">Car Port Personal Build</h4>
                             <p class="text-slate-600">Designed a cantilevered carport addition using SolidWorks and performed FEA stress analysis to validate the I-beam design for structural integrity.</p>
                         </div>
                     </div>
-                    <!-- Personal Project 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card"
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 cursor-pointer project-card flex flex-col"
                         data-gallery='[
                         {"url": "https://placehold.co/1200x800/FDBA74/C2410C?text=Image+1", "caption": "Caption 1."},
                         {"url": "https://placehold.co/1200x800/FDBA74/C2410C?text=Image+2", "caption": "Caption 2."},
                         {"url": "https://placehold.co/1200x800/FDBA74/C2410C?text=Image+3", "caption": "Caption 3."}
                         ]'>
-                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+3" alt="Thumbnail" class="w-full h-48 object-cover"><div class="p-6"><h4 class="text-xl font-semibold mb-2">Personal Project Title 3</h4><p class="text-slate-600">Description for project 3.</p></div></div>
+                        <img src="https://placehold.co/600x400/FDBA74/C2410C?text=Personal+Project+3" alt="Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <h4 class="text-xl font-semibold mb-2">Personal Project Title 3</h4>
+                            <p class="text-slate-600">Description for project 3.</p>
+                        </div>
+                    </div>
                    
                 </div>
             </div>
@@ -473,6 +478,7 @@
     </script>
 </body>
 </html>
+
 
 
 
